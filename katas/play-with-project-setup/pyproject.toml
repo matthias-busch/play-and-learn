@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "play-with-project-setup"
+version = "0.1.0"
+description = ""
+authors = ["Matthias Busch (Datadrivers GmbH) <matthias.busch@datadrivers.de>"]
+readme = "README.md"
+packages = [{include = "play_with_project_setup", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = {version = "^1.5.1"}
+pytest = {version = "^7.4.2"}
+pre-commit = "^3.4.0"
+ruff = "^0.0.291"
+
+[tool.pytest.ini_options]
+addopts = "-v"
+testpaths = ["tests"]
+
+[tool.mypy]
+strict = true
+implicit_reexport = true
+check_untyped_defs = true
+show_error_codes = true
+warn_redundant_casts = true
+warn_unused_configs = true
+warn_unused_ignores = true
+files = ["src", "tests"]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
