@@ -9,7 +9,7 @@
 
 2. Add your `dev` dependencies so anything related to type-checking, tests, linting etc.:
     ```shell
-    poetry add --group dev mypy pytest pre-commit ruff
+    poetry add --group dev mypy pytest pytest-cov pre-commit ruff
     ```
 
 3. Install your `dev` dependencies:
@@ -25,5 +25,12 @@
     ```
     or
     ```
-    poetry run pytest
+    poetry run pytest --cov=play_with_project_setup --cov-report term-missing
     ```
+
+6. Create a [.pre-commit-config.yaml](../../.pre-commit-config.yaml) in the root and configure all the hooks you like.
+
+7. Create the CI/CD pipelines that define the GitHub Actions to run checks for pre-commit, pytest and mypy:
+    - [check-lint](../../.github/workflows/kata_project_setup_check_lint.yaml)
+    - [check-mypy](../../.github/workflows/kata_project_setup_check_mypy.yaml)
+    - [check-pytest](../../.github/workflows/kata_project_setup_check_pytest.yaml)

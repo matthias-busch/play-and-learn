@@ -15,10 +15,10 @@ What I want from this is:
   - **Timebox**: 120min
   - **Short description**: Setup/initalize a Python project from scratch using [https://python-poetry.org/docs/](poetry)
   - **Acceptance Criteria**:
-    - simple (typed!) Python package that does something
-    - simple pytest unit test(s) with [pytest](https://pypi.org/project/pytest/)
-    - GitHub CI/CD pipelines that automatically lint, type check and execute the unit tests
+    - simple (typed!) Python package that does something ✔️
+    - simple pytest unit test(s) with [pytest](https://pypi.org/project/pytest/) ✔️
+    - GitHub CI/CD pipelines that automatically lint, type check and execute the unit tests ✔️
   - **Bonus**:
-    - autodocs with either [Sphinx](https://pypi.org/project/Sphinx/) or [https://pypi.org/project/mkdocs/](mkdocs)
-    - release pipeline that publishes
-  - **Artefact**: TODO: Add link to repo / file
+    - autodocs with either [Sphinx](https://pypi.org/project/Sphinx/) or [https://pypi.org/project/mkdocs/](mkdocs) ❌
+    - release pipeline that publishes ❌
+  - **Artefact**: [play-with-project-setup](katas/play-with-project-setup/README.md)
