@@ -3,6 +3,5 @@
 def add_two(input: int) -> int:
     return input + 2
 
-if __name__ == "__main__":
-    add_two(input=5)
-    print("Hello World")
+if __name__ == "__main__": # pragma: no cover
+    print("hello, dummy")

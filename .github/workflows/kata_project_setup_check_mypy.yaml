@@ -1,0 +1,44 @@
+name: check-mypy
+on:
+  pull_request:
+    branches:
+      - "main"
+
+env:
+  # STATIC POETRY CONFIG
+  POETRY_VERSION: "1.6.1"
+  POETRY_VIRTUALENVS_CREATE: "true"
+  POETRY_VIRTUALENVS_IN_PROJECT: "true"
+  POETRY_NO_INTERACTION: "true"
+  POETRY_INSTALLER_PARALLEL: "true"
+  POETRY_INSTALLER_MAX_WORKERS: "6"
+
+jobs:
+  pytest:
+    runs-on:
+      - ubuntu-22.04
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: setup-python
+        id: setup-python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10.4"
+      - name: setup-poetry
+        run: |
+          export POETRY_VERSION=$POETRY_VERSION
+          curl -sSL https://install.python-poetry.org | python -
+          echo "PATH=${HOME}/.poetry/bin:${PATH}" >> $GITHUB_ENV
+          poetry config --list
+      - name: install dependencies
+        working-directory: "katas/play-with-project-setup/"
+        run: |
+          poetry install --with dev
+      - name: run pytest
+        working-directory: "katas/play-with-project-setup/"
+        run: |
+          poetry run mypy
