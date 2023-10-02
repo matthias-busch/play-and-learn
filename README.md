@@ -11,8 +11,8 @@ What I want from this is:
 ### Katas
 
 - **Python (poetry) project setup**
-  - **Date**: 2023-10-02
-  - **Timebox**: 60min
+  - **Date(s)**: 2023-10-02
+  - **Timebox**: 120min
   - **Short description**: Setup/initalize a Python project from scratch using [https://python-poetry.org/docs/](poetry)
   - **Acceptance Criteria**:
     - simple (typed!) Python package that does something
