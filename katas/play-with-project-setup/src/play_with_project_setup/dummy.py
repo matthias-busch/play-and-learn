@@ -5,3 +5,4 @@ def add_two(input: int) -> int:
 
 if __name__ == "__main__":
     add_two(input=5)
+    print("Hello World")
