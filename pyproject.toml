@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "dummy"
+version = "0.0.1"
+description = "dummy template to allow to manage project level dev dependencies via poetry, e.g. pre-commit"
+authors = ["matthias-busch <matthias.busch@datadrivers.de>"]
+
+[tool.poetry.dependencies]
+python = "~3.10"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.4.0"
+
+[tool.black]
+line-length = 120
+target-version = ['py310']
+include = '\.py?$'
+exclude = '''
+/(
+    \.git
+  | \.github
+  | \.mypy_cache
+  | \.pytest_cache
+  | \.venv
+  | dist
+)/
+'''
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
