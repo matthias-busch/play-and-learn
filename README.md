@@ -10,6 +10,14 @@ What I want from this is:
 
 ### Katas
 
+- **Pytest Tutorial - How to Test Python Code**
+  - **Date(s)**: 2023-10-27
+  - **Timebox**: 120min
+  - **Short description**: Working through this tutorial https://www.youtube.com/watch?v=cHYq1MRoyI0 from freeCodeCamp ✔️
+  - **Acceptance Critera**:
+    - Completed the tutorial
+  - **Artefact**: [pytest-tutorial-freecodecamp](katas/pytest-tutorial-freecodecamp/README.md)
+
 - **Python (poetry) project setup**
   - **Date(s)**: 2023-10-02
   - **Timebox**: 120min
